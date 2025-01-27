@@ -1,33 +1,55 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Banner = () => {
   return (
-    <section
-      className="h-[40rem] w-full md:h-[calc(100vh-80px)] bg-contain bg-no-repeat sm:bg-cover sm:bg-center"
-      style={{
-        backgroundImage: "url('/banner_2.jpg')"
-      }}
-    >
-      <div className="relative px-4 sm:px-6 lg:px-8 pt-14">
-        <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl mx-auto absolute top-15 md:top-40 right-0 left-0 text-center">
-          <div className="text-black">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-semibold tracking-tight">
+    <section className="realtive pt-15 px-6 bg-white overflow-hidden h-[calc(100vh-80px)]">
+      {/* Bg Image */}
+      <img
+        className=" absolute top-0 right-0 w-[50rem] select-none"
+        src="/pageLayout/1.png"
+        alt=""
+        draggable={false}
+      />
+      <img
+        className=" absolute top-[50rem] left-0 w-40 select-none"
+        src="/pageLayout/2.png"
+        alt=""
+        draggable={false}
+      />
+
+      <div className="flex flex-wrap items-center justify-between max-w-7xl mx-auto">
+        {/* Left Column */}
+        <div className="w-full lg:w-1/2 py-6">
+          <div>
+            <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Discover Delicious Recipes
-            </h1>
-            <p className="mt-4 sm:mt-6 text-xs sm:text-sm md:text-lg lg:text-xl font-medium">
+            </p>
+            <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
               Explore a world of flavors and learn to cook like a pro with our
               step-by-step recipes. From comfort food to gourmet dishes, we have
               something for everyone.
             </p>
-            <div className="mt-8 sm:mt-10 flex items-center justify-center gap-x-4 sm:gap-x-6">
-              <Link
-                to="/recipes"
-                className="rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm md:text-sm lg:text-sm font-semibold text-white bg-black transition ease-in-out duration-300 hover:text-white hover:bg-yellow-500 shadow-sm"
-              >
-                Explore Recipes
-              </Link>
-            </div>
+            <Link
+              to="/recipes"
+              className="inline-flex items-center mt-6 rounded-full bg-black hover:bg-yellow-500 text-white font-bold px-6 py-3 text-sm sm:text-base md:text-lg lg:text-lg transition duration-300"
+            >
+              Explore Recipes
+              <AiOutlineArrowRight className="ml-3 text-xl" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Right Column */}
+        <div className="w-full lg:w-1/2 flex justify-center py-6">
+          <div className="relative">
+            <img
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg hero_img overflow-hidden select-none"
+              src="/1.png"
+              alt="Hero"
+              draggable={false}
+            />
           </div>
         </div>
       </div>

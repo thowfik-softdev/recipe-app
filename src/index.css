@@ -9,3 +9,18 @@
   background-color: #f59e0b;
   color: #ffffff;
 }
+
+/* Image Rotate Animation */
+.hero_img {
+  animation: rotateAnimation 35s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
